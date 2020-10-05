@@ -1,4 +1,6 @@
 body {
+    margin-left:15%;
+    margin-right:15%;
     text-align: center;
     background-color: black;
       color: white;
@@ -17,27 +19,25 @@ body {
 
 
 
-img,{float:right;}
-
-#pokemon{
-    float:none;
- }
-
-#gamepic{float:left;
-    padding-right: 10px;
-}
-
-#cardpic{
+img{float:right;
     padding-left: 10px;
 }
 
-ol{
-    text-align:left;
+#pokemon{
+    float:none;
+    padding-bottom:10px;
+ }
+
+#gamepic{
+    float:left;
+    padding-right: 10px;
+   
 }
-.lefte{
-    padding-left:3%;
-    text-align:left;
+
+#cardpic{
+    float:none;
 }
+
 dl{
     border: 2px solid white;
 }
@@ -45,13 +45,12 @@ dd{
     display: list-item;
     list-style-type: disc;
     }
-    
-#nav1 {
-    width:50%;
-    float:left;
-}
-#nav2 {
-     width:50%;
-    float:right;
-}
 
+#nav1{
+    background-color:gray;
+    float:left;
+    width:50%;
+}
+#nav2{
+     background-color:gray;
+}
