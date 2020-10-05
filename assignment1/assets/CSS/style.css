@@ -1,0 +1,57 @@
+body {
+    text-align: center;
+    background-color: black;
+      color: white;
+}
+
+
+   table, th, td {
+  border: 2px solid black;
+  border-collapse:collapse;
+  background-color:#CCFFFF;
+  color: black;
+  margin-left:15%;
+  margin-right:15%;
+}
+
+
+
+
+img,{float:right;}
+
+#pokemon{
+    float:none;
+ }
+
+#gamepic{float:left;
+    padding-right: 10px;
+}
+
+#cardpic{
+    padding-left: 10px;
+}
+
+ol{
+    text-align:left;
+}
+.lefte{
+    padding-left:3%;
+    text-align:left;
+}
+dl{
+    border: 2px solid white;
+}
+dd{
+    display: list-item;
+    list-style-type: disc;
+    }
+    
+#nav1 {
+    width:50%;
+    float:left;
+}
+#nav2 {
+     width:50%;
+    float:right;
+}
+
