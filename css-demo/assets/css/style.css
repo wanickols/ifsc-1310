@@ -119,6 +119,7 @@ header.primary nav ul li a:link, header.primary nav ul li a:visited{
   text-decoration:none;
   background-color:#000;
   background-color:rgba(0,0,0,.3);
+  border:5px solid rgba(0,0,0,.4);
   padding: 20px 20px;
   border-radius:100px;
   transition:.5s;
