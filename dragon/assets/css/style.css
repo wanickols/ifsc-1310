@@ -49,7 +49,6 @@ header.primary {
   text-shadow: 2px 2px #000000;
   background-image: url("../img/SpaceX.jpg");
   background-size: 100% 100%; /* little weird on mobile but liked better then cover how it changes with screen size to fit.*/
-  /* Shorhand T,R,B,L*/
   padding: 6em 2em;
 }
 
@@ -234,11 +233,11 @@ section#articles h2 {
 
 /* ------------- Aside --------------- */
 
-/* Attribute Selector */
+/*I used your base html and the roles, they come back with warnings but I like them :D*/
 aside[role="complementary"] {
   background-color:rgba(235,27,0,.85);
-  color: #ffffff;
-  padding: 2.5em;
+  color: #fff;
+  padding: 10%;
 }
 
 aside .container {
@@ -278,8 +277,7 @@ aside article a:link,
 aside article a:visited {
   color: #ffffff;
   display: block;
-  margin-top: 1.2em;
-  letter-spacing: 1.2px;
+  margin-top: 10%;
 }
 
 
