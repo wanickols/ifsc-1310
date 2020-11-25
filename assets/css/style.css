@@ -126,6 +126,9 @@ header.primary nav ul li a:hover{
   padding:20px;
 }
 
+.images {
+   text-align:center;
+}
 
 #Title{
   font-family: 'Great Vibes', cursive;
