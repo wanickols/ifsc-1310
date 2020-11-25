@@ -25,27 +25,6 @@ html {
   max-width: 900px;
 }
 
-.img-right {
-  float: right;
-  margin: 10px 0 10px 20px;
-  border: 1px solid #c0c0c0;
-  padding: 5px;
-}
-
-.img-left {
-  float: left;
-  margin: 10px 20px 10px 0;
-  border: 1px solid #c0c0c0;
-  padding: 5px;
-}
-
-.img-center {
-  display: block;
-  margin: 20px auto;
-  border: 1px solid #c0c0c0;
-  padding: 5px;
-}
-
 /* ---- Responsive Images ----*/
 img {
   max-width: 100%;
@@ -55,64 +34,55 @@ img {
 /* ----- Global Styles ---- */
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Teko', sans-serif;
+  font-size:1.2rem;
   margin: 0;
 }
+
+
+/* ----- Header ---- */
 
 header.primary {
   background-color: rgba(0,0,0,1);
   text-align: center;
   color: #ffffff;
   text-shadow: 2px 2px #000000;
-  
+  background-image: url("../img/SpaceX.jpg");
+  background-size: 100% 100%; /* little weird on mobile but liked better then cover how it changes with screen size to fit.*/
   /* Shorhand T,R,B,L*/
   padding: 6em 2em;
-  position: relative;
-}
-
-header.primary::before {
-  content: "";
-   background-image: url("../img/SpaceX.jpg");
-  background-size: cover;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  opacity: 1;
 }
 
 header.primary h1 {
-  font-size: 3.2rem;
-  margin: 20px 0;
-  position: relative;
+  font-size: 3rem;
+  margin: 20px;
+  
 }
 
 header.primary h1 a {
   color: #ffffff;
-  background-image: url("https://assets.codepen.io/7248/logo-2.png");
+  background-image: url("https://assets.codepen.io/7248/logo-2.png"); /*I couldn't find this image so I took the one from codepen since it seemed to work*/
   display: block;
   width: 450px;
   height: 70px;
   margin: 0 auto;
+
   text-indent:100%;
-  white-space:nowrap;
+  white-space:nowrap; /*This makes the words for the logo disappear*/
   overflow:hidden;
 }
 
 header.primary h2 {
-  font-family: "Goldman", cursive;
-  font-size: 2em;
-  /* Shorhand Three Value Top, Left/Right, Bottom*/
-  margin: 20px auto 40px;
-  position: relative;
+ font-family: 'Kanit', sans-serif;
+  font-size: 1.8em;
+  margin: 25px auto;
+  margin-bottom: 50px;
 }
 
 
  
 
 header.primary nav ul {
-  position: relative;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -125,6 +95,7 @@ header.primary nav ul {
 
 
 header.primary nav li {
+  font-size:1.6rem;
   list-style-type: none;
   width: 100%;
   margin-bottom:10px;
@@ -135,12 +106,11 @@ header.primary nav a:link,
 header.primary nav a:visited {
   color: white;
   text-decoration: none;
-  background-color: #000000;
   background-color:rgba(235,27,0,.8);
   padding: 8px 16px;
   border-radius: 10px;
   border:5px solid rgba(255,255,255,.1);
-  transition: 0.6s;
+  transition: .5s;
   display: block;
 }
 
@@ -157,7 +127,7 @@ section#content {
 }
 
 section#content h3{
-  font-family: "Goldman", cursive;
+  font-family: 'Kanit', sans-serif;
   font-size: 1.2em;
   color: #14CCFF;
   border-bottom: 1px solid #c0c0c0;
@@ -169,30 +139,13 @@ section#content caption{
   font-weight:bold;
   font-size:1.5rem;
   margin:10px;
-  font-family: "Goldman", cursive;
+  font-family: 'Kanit', sans-serif;
   font-size: 2em;
   color: #14CCFF;
 }
 
-section#content th {
-  background:#000;
-  color:#ffffff;
-  text-align:left;
-  padding:10px;
-}
 
-section#content td{
-  border:1px solid #c0c0c0;
-  padding:5px;
-}
 
-section#content tr:nth-child(even){
-  background:#DCDCDC;
-}
-
-section#content tr:hover{
-  background:#8EA6B8;
-}
 
 /* ------------- Articles --------------- */
 
@@ -203,10 +156,7 @@ section#articles {
 section#articles .container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  border-bottom: 1px solid #6F00FF;
-  padding: 0;
+  padding:10px;
   margin-bottom:0px;
 }
 
@@ -216,33 +166,32 @@ details summary{
   flex: 0 0 100%;
   color: #14CCFF;
   text-align: center;
-  font-family: "Goldman", cursive;
+  font-family: 'Kanit', sans-serif;
   font-size: 2em;
 }
 
 section#articles h2 {
   color: #14CCFF;
-  text-shadow: 2px 2px #000;
+  text-shadow: 2px 2px #fff;
 }
 
 #articles article.post {
   width: 100%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   padding: 10px;
   transition: 0.6s;
   font-size: 1.2rem;
-  border-radius: 10px;
+  border-radius: 20px;
   background: #fff;
   margin-bottom:20px;
 }
 
 #articles article.post h2 {
   font-size: 1.5em;
-  text-shadow: none;
+  text-shadow: 2px 2px #000;
 }
 
 #articles article.post:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 1);
 }
 
 #articles article time,
@@ -287,7 +236,7 @@ section#articles h2 {
 
 /* Attribute Selector */
 aside[role="complementary"] {
-  background-color:rgba(235,27,0,.9);
+  background-color:rgba(235,27,0,.85);
   color: #ffffff;
   padding: 2.5em;
 }
@@ -299,19 +248,28 @@ aside .container {
 }
 
 aside article.widget {
+  padding:20px;
+  background-color:rgba(0,0,0,.1);
   width: 40%;
+  transition:.6s;
+}
+
+aside article.widget:hover{
+  background-color:rgba(0,0,0,.15)
 }
 
 .widget.overview table {
-  font-size: 0.7em;
-  border-collapse: collapse;
+  margin-left:14%;
+  font-size: 0.8em;
+  border-collapse: collapse; /*gets rid of space between borders*/
 }
 
 .widget.overview table td {
-  border-bottom: 1px solid #fff;
+  border-bottom: 2px solid #fff;
   padding: 10px;
 }
 
+/*Coppied this to get the table to align the right column on the right*/
 .widget.overview table td:nth-child(even) {
   text-align: right;
 }
@@ -324,14 +282,11 @@ aside article a:visited {
   letter-spacing: 1.2px;
 }
 
-aside article a:hover,
-aside article a:active {
-  text-decoration: none;
-}
 
 aside article footer {
   display: none;
 }
+
 
 /*------ Footer ------*/
 
@@ -340,11 +295,11 @@ footer#colophon {
 }
 
 #colophon h6 {
-  padding: 20px;
   margin: 0;
+  padding:10px;
   color: #fff;
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
 }
 
@@ -357,6 +312,7 @@ footer#colophon {
 /*---------------History-----------------------*/
 
 .widget #historytable{
+  margin-left:0;
     border:1px solid white;
       border-collapse:collapse;
 }
@@ -370,11 +326,22 @@ footer#colophon {
 
 /*---------------FAQ-----------------------*/
 
+#faqcontent {
+  padding:20px 0px;
+  background-color:rgba(0,0,0,.05);
+}
 
 #faqcontent details {
+  font-size:1rem;
   text-align:left;
-  background: lightgrey;
+  padding:20px;
   margin:20px;
+     background: rgba(0,0,0,.06);
+  transition:.6s;
+}
+
+#faqcontent details:hover {
+   background: rgba(0,0,0,.08);
 }
 
 #faqcontent p{
@@ -383,6 +350,7 @@ footer#colophon {
 }
 
 /* ---------------Media Queries----------------- */
+/*I just took this from the codecast primarily Just added the widget width.*/
 
 @media screen and (max-width: 600px) {
   header.primary nav ul {
@@ -425,6 +393,7 @@ aside article.widget {
 }
 
 .widget.overview table {
+  margin:0;
   width: 100%;
 }
 }
