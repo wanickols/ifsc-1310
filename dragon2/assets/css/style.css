@@ -1,0 +1,484 @@
+/* Color Theme  
+ #6F00FF //purple
+ #EB1B00 //red
+ #FFBF00 //yellow
+ #14CCFF //blue
+ #000000
+*/
+
+/* ---------------Box Sizing----------------- */
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* ----- Utility Styles ---- */
+
+.container {
+  width: 72%;
+  margin: 48px auto;
+  line-height:24px;
+  max-width: 900px;
+}
+
+/* ---- Responsive Images ----*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ----- Global Styles ---- */
+
+body {
+  font-family: 'Teko', sans-serif;
+  font-size:24px;
+  margin: 0;
+}
+
+
+
+/* ----- Header ---- */
+
+header.primary {
+  background-color: rgba(0,0,0,1);
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 2px 2px #000000;
+  background-image: url("../img/SpaceX.jpg");
+  background-size: 100% 100%; /* little weird on mobile but liked better then cover how it changes with screen size to fit.*/
+  padding: 24px 24px;
+}
+
+header.primary h1 {
+  font-size: 48px;
+  margin: 24px;
+  
+}
+
+header.primary h1 a {
+  color: #ffffff;
+  background-image: url("https://assets.codepen.io/7248/logo-2.png"); /*I couldn't find this image so I took the one from codepen since it seemed to work*/
+  display: block;
+  width: 456px;
+  height: 72px;
+  margin: 0 auto;
+
+  text-indent:100%;
+  white-space:nowrap; /*This makes the words for the logo disappear*/
+  overflow:hidden;
+}
+
+header.primary h2 {
+ font-family: 'Kanit', sans-serif;
+  font-size: 48px;
+  margin: 24px auto;
+  margin-bottom: 48px;
+}
+
+
+ 
+
+header.primary nav ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 600px;
+  align-content: center;
+  padding: 0;
+  max-width: 900px;
+
+}
+
+
+header.primary nav li {
+  font-size:36px;
+  list-style-type: none;
+  width: 100%;
+  margin-bottom:12px;
+
+}
+
+header.primary nav a:link,
+header.primary nav a:visited {
+  color: white;
+  text-decoration: none;
+  background-color:rgba(235,27,0,.8);
+  padding: 12px 24px;
+  border-radius: 12px;
+  border:6px solid rgba(255,255,255,.1);
+  transition: .5s;
+  display: block;
+}
+
+header.primary nav a:hover,
+header.primary nav a:active {
+  background-color: rgba(235,107,0,.9);
+  border:6px solid rgba(255,255,255,1);
+}
+
+/* ------------- Content --------------- */
+
+section#content {
+  padding: 24px 0;
+}
+
+
+
+section#content caption{
+  font-weight:bold;
+  font-size:24px;
+  margin:12px;
+  font-family: 'Kanit', sans-serif;
+  font-size: 24px;
+  color: #14CCFF;
+}
+
+
+
+
+/* ------------- Articles --------------- */
+
+section#articles {
+  background: #181c1f;
+  line-height:24px;
+}
+
+section#articles .container {
+  display: flex;
+  flex-direction: column;
+  padding:12px;
+  margin-bottom:0px;
+}
+
+section#articles h2,
+#content h2,
+details summary{
+  flex: 0 0 100%;
+  color: #14CCFF;
+  text-align: center;
+  
+  font-family: 'Kanit', sans-serif;
+  font-size: 24px;
+}
+
+section#articles h2 {
+  color: #14CCFF;
+  text-shadow: 2px 2px #fff;
+
+}
+
+#articles article.post {
+  width: 100%;
+  padding: 12px;
+  transition: 0.6s;
+  font-size: 24px;
+  border-radius: 24px;
+  background: #fff;
+  margin-bottom:24px;
+}
+
+#articles article.post h2 {
+  font-size: 48px;
+  padding-bottom:12px;
+  text-shadow: 2px 2px #000;
+  
+}
+
+#articles article.post:hover {
+  box-shadow: 0 12px 24px rgba(255, 255, 255, 1);
+}
+
+#articles article time,
+#articles article figcaption,
+#articles article footer {
+  font-size: 18px;
+  text-align: center;
+  color: #000;
+  text-transform: uppercase;
+}
+
+#articles .post a:link,
+#articles .post a:visited {
+  color: #14CCFF;
+}
+
+#articles .post figure {
+  margin: 0px;
+}
+
+#articles .post img {
+  display: block;
+  margin: 24px auto;;
+  padding: 24px;
+  border-radius: 12px;
+  height:360px;
+}
+
+#articles .post figcaption {
+  margin-top:-36px;
+}
+
+#articles h3{
+  color:#14CCFF;
+  font-size:36px;
+  line-height:36px;
+  text-align:center;
+}
+
+#articles p {
+  padding: 0 24px;
+  margin-bottom: 24px;
+}
+
+
+/* ------------- Aside --------------- */
+
+/*I used your base html and the roles, they come back with warnings but I like them :D*/
+aside[role="complementary"] {
+  background-color:rgba(235,27,0,.85);
+  color: #fff;
+  padding:24px 0px;
+}
+
+aside .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+aside article.widget {
+  padding:24px;
+  margin:24px;
+  background-color:rgba(0,0,0,.1);
+  width: 48%;
+  transition:.6s;
+}
+
+aside article.widget:hover{
+  background-color:rgba(0,0,0,.15)
+}
+
+.widget.overview table {
+  font-size: 24px;
+  border-collapse: collapse; /*gets rid of space between borders*/
+}
+
+.widget.overview table td {
+  border-bottom: 2px solid #fff;
+  padding: 12px;
+}
+
+/*Coppied this to get the table to align the right column on the right*/
+.widget.overview table td:nth-child(even) {
+  text-align: right;
+}
+
+aside article a:link,
+aside article a:visited {
+  color: #ffffff;
+  display: block;
+  margin-top: 24px;
+}
+
+
+aside article footer {
+  display: none;
+}
+
+
+/*------ Footer ------*/
+
+footer#colophon {
+  background-color: #000;
+}
+
+#colophon h6 {
+  margin: 0;
+  padding:0px 24px;
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+#colophon h6 a:link,
+#colophon h6 a:visited {
+  color: #fff;
+}
+
+
+/*---------------History-----------------------*/
+
+.widget #historytable{
+  margin-left:0;
+    border:1px solid white;
+      border-collapse:collapse;
+}
+#historytable td {
+  padding:12px;
+  border:1px solid white;
+  border-collapse:collapse;
+}
+
+.widget h2 { text-align : center;}
+
+/*---------------FAQ-----------------------*/
+
+#accordian-container ul, #accordian-container li {
+	list-style: none;
+}
+
+#accordian-container {
+	width: 100%;
+	margin:24px auto;
+}
+
+
+.accordian-title {
+	text-align: center;
+	margin-bottom: 0px;
+	background-color:rgba(235,27,0,9);
+  padding:24px 0px;
+}
+
+#accordian-container .accordian-title h2{
+  padding:0px;
+  line-height:36px;
+  font-size:48px;
+  margin:0px;
+  color:#fff;
+  
+}
+
+
+.snippets-accordian {
+  margin:0px;
+  padding:0px;
+  padding-left:24px;
+  width:102.7%;
+
+
+}
+.snippets-accordian li {
+  width: 100%;
+    height:100%;
+  margin-left:-24px;
+  
+
+}
+
+
+.snippets-accordian li.q {
+	font-size:36px;
+  text-align:left;
+  padding:36px;
+  background: rgba(255,255,255,.75);
+  transition:.6s;
+  line-height:36px;
+
+	color: #050505;
+	font-weight: bold;
+	border: 2px solid rgba(235,27,0,9);
+	cursor: pointer;
+}
+
+
+.snippets-accordian li.a {
+  padding:24px;
+	background: #000;
+	color:#fff;
+	display: none;
+}
+
+
+.rotate {
+	-moz-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+
+#faqcontent {
+  padding:0px 0px;
+  background-color:rgba(0,0,0,0);
+}
+
+/*
+#faqcontent details {
+ 
+}
+
+#faqcontent summary {
+  color:rgba(235,27,0,.85);
+}
+
+#faqcontent details:hover {
+   background: rgba(255,255,255,.9);
+}
+
+#faqcontent p{
+  font-size:24px;
+  padding:24px;
+}
+*/ 
+
+/* ---------------Media Queries----------------- */
+/*I just took this from the codecast primarily Just added the widget width.*/
+
+@media screen and (max-width: 600px) {
+  header.primary nav ul {
+    flex-direction: column;
+    margin: 0 auto;
+    width: 400px;
+  }
+
+  header.primary nav ul li {
+    margin-bottom: 12px;
+    width: 400px;
+  }
+
+  header.primary nav ul li a {
+    display: block;
+  }
+
+  section#articles .container {
+    flex-direction:column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #c0c0c0;
+    padding: 0 0 24px 0;
+  }
+
+  #articles article.post {
+    width: 100%;
+    margin-bottom: 48px;
+  }
+  
+aside .container {
+  text-align:center;
+  display:block;
+  width: 90%;
+}
+
+aside article.widget {
+  width: 90%;
+  margin:5%;
+}
+
+.widget.overview table {
+  margin:0;
+  width: 100%;
+}
+}
+
+/*making my links to different pages start at bottom of the header*/
+#histart, #hostart, #fstart{
+  padding-top:48px;
+  margin-top:-36px;
+}
+
